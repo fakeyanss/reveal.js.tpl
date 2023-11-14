@@ -16,8 +16,13 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown="slide.md" data-separator="^---$" data-separator-vertical="^--$"
+					data-separator-notes="^Note:">
+					<!--
+				   Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+				   For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+			   -->
+				</section>
 			</div>
 		</div>
 
@@ -33,7 +38,26 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+
+				keyboard: {
+					74: 'down', // j
+					75: 'up', // k
+					72: 'left', // h
+					76: 'right', // l
+					9: () => { Reveal.toggleOverview() }, // tab for overview
+					// s for speaker view
+					80: () => { Reveal.togglePause() }, // p for pause
+					191: () => { alert(Reveal.availableRoutes()) }, // ? for availble routes
+				},
+
+				showNotes: false,
+
+				slideNumber: 'h.v',
+
+				// activate scroll mode when mobile device
+				scrollActivationWidth: 800,
+				scrollProgress: 'auto'
 			});
 		</script>
 	</body>
