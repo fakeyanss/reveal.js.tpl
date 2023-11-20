@@ -1,64 +1,19 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>Slide Share</title>
+</head>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown="slide.md" data-separator="^---$" data-separator-vertical="^--$"
-					data-separator-notes="^Note:">
-					<!--
-				   Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
-				   For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
-			   -->
-				</section>
-			</div>
-		</div>
+<body>
+	<ul>
+		<li>
+			<a href="share/example">markdown example</a>
+		</li>
+	</ul>
+</body>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
-
-				keyboard: {
-					74: 'down', // j
-					75: 'up', // k
-					72: 'left', // h
-					76: 'right', // l
-					9: () => { Reveal.toggleOverview() }, // tab for overview
-					// s for speaker view
-					80: () => { Reveal.togglePause() }, // p for pause
-					191: () => { alert(Reveal.availableRoutes()) }, // ? for availble routes
-				},
-
-				showNotes: false,
-
-				slideNumber: 'h.v',
-
-				// activate scroll mode when mobile device
-				scrollActivationWidth: 800,
-				scrollProgress: 'auto'
-			});
-		</script>
-	</body>
 </html>
